@@ -1,0 +1,18 @@
+---
+- name: isntallation git et htop
+  hosts: groupe1
+  remote_user: user
+  vars:
+    user: tacha
+    domains:
+      - domain: tacha.org
+        php: yes
+      - domain: olia.org
+        php: no
+        repo: https://github.com/Grafikart/grafikart.github.io.git
+  roles:
+    - depos
+    - tools
+    - user
+    - nginx
+...
